@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chay Aur Code</h1>
+
+    <button  id="stop">Stop</button>
+
+    <script>
+       const sayhitesh= ()=>{
+    console.log("hitesh")
+       }
+
+setTimeout(sayhitesh,2000)
+
+const changeText= ()=>{
+document.querySelector('h1').innerHTML="best JS series"
+}
+ const changeMe = setTimeout(changeText,4000)
+
+ document.querySelector('stop').addEventListener('click', function(){
+    clearTimeout(changeMe)
+    
+ })
+//  clearTimeout(changeMe)
+// better to add it in a event listener
+    </script>
+
+// now you should also know , how to stop this setTimeout
+  
+</body>
+</html>
+<!-- settimeout is method which calls an API -->
+  <!-- in set timeout , we can also pass a function--> 
+<!-- 
+  const changeText = ()=>{
+    document.querySelector('h1').innerHTML= "best js series"
+  }
+  // after 2 seconds , your name will get changed
+  setTimeout(changeText, 2000)
+setTimeout(()=>{
+console.log("hitest");
+
+
+},2000) -->
+
+const changeText =()=>{
+  document.querySelector('h1').innerHTML
+}
+
+
+const changeText = ()=>{
+ document.querySelector('h1')
+}
+<!--  docker is a container , which automates the deployment of application -->

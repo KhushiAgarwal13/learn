@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propogation</title>
+</head>
+<body>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <div id="parent">
+        parent
+        <div id="button"> 
+            Child
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('button').addEventListener('click',(e)=>{
+console.log("child clicked")
+e.stopPropagation()
+        },true)
+
+        document.getElementById('parent').addEventListener('click',(e)=>{
+            console.log("parent cliced")
+            e.stopPropagation()
+        },true)
+
+    </script>
+</body>
+</html>
+<!-- now i will expalain , what's event propogation, it's a mechaninsm when events are propogated or passed through 
+ DOM   -->
+ <!--  There are two phases in event propogation -->
+   <!-- Bubbling Phase  -->
+    <!-- Capturing Phase -->
+     <!-- In Bubble Phaes , event travels from target element to root element -->
+      <!-- In Capturing Phase , event travels from outermost element to target element -->
+       <!-- Bubbling is byDefault , whose value is false -->
+        <!-- Capturing can be applied bu putting true -->

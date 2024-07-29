@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body background="#212121">
+
+    <h1>Chai aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop"> Stop</button>
+ 
+</body>
+<script>
+// so we have two buttons , start and stop
+
+
+function sayDate(str){
+    console.log(str,Date.now());
+}
+
+let intervalid;
+
+document.querySelector('#start').addEventListener('click',()=>{
+    intervalId= setInterval(sayDate, 1000, "hi")
+
+})
+
+document.querySelector('#stop').addEventListener('click',()=>{
+        clearInterval(intervalId)
+          })  
+
+
+// so what our task is -- if we click start 
+// it will start printing
+
+// and if click stop 
+// it will stop
+
+
+</script>
+</html>
+<!-- 
+setInterval (function(){
+    console.log('khushi',Date.now());
+          },1000)
+        // this event will keeep
+     // on running, as nothing's stopping it -->
